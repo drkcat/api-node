@@ -24,3 +24,12 @@ export const capitalizeEachWord = (text, setLowercase) => {
     }
     return null;
 };
+
+export const isInt = (number) => {
+    if (typeof number == 'number') {
+        return true;
+    } else if (typeof number != 'string') {
+        return false;
+    }
+    return !isNaN(parseFloat(number));
+};

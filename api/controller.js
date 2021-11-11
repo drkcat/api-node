@@ -1,4 +1,4 @@
-import zaragoza from '../service/zaragoza.js';
+import zaragozaTransit from '../service/zaragoza-transit.js';
 
 const controllers = {
   about: (req, res) => {
@@ -9,17 +9,11 @@ const controllers = {
     res.json(aboutInfo);
   },
   getZaragozaBusStation: (req, res) => {
-    zaragoza.busStation(req, res, (err, dist) => {
+    zaragozaTransit.busStation(req, res, (err, dist) => {
       if (err) res.send(err);
       res.json(dist);
     });
-  },
-  getZaragozaTramStation: (req, res) => {
-    zaragoza.tramStation(req, res, (err, dist) => {
-      if (err) res.send(err);
-      res.json(dist);
-    });
-  },
+  }
 };
 
 export default controllers;
