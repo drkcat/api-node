@@ -4,7 +4,7 @@ import { capitalize, capitalizeEachWord, isInt } from '../utils.js'
 const busApiURL = 'https://www.zaragoza.es/sede/servicio/urbanismo-infraestructuras/transporte-urbano/poste-autobus/tuzsa-';
 const busWebURL = 'https://zaragoza.avanzagrupo.com/wp-admin/admin-ajax.php?action=tiempos_de_llegada&selectPoste=';
 
-const zaragozaTransit = {
+const transit = {
   busStation: (req, res) => {
     const parseWeb = req.query.source && req.query.source === "web"
     const url = parseWeb ? busWebURL + req.params.stationNumber : `${busApiURL + req.params.stationNumber}.json?srsname=wgs84`
@@ -93,4 +93,4 @@ const zaragozaTransit = {
   },
 };
 
-export default zaragozaTransit;
+export default transit;

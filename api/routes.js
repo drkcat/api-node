@@ -4,8 +4,8 @@ const routes = (app) => {
   app
     .route('/about').get(controller.about);
   app
-    .route('/zgz/bus/stations/:stationNumber')
-    .get(controller.getZaragozaBusStation);
+    .route('/bus/stations/:stationNumber')
+    .get(controller.getBusStation);
 };
 
 export default routes;

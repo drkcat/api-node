@@ -1,7 +1,7 @@
 {
-  "name": "@drkcat/api",
+  "name": "zaragoza-api",
   "version": "0.1.0",
-  "description": "Simple API",
+  "description": "Just a better API for Zaragoza services",
   "main": "server.js",
   "type": "module",
   "scripts": {

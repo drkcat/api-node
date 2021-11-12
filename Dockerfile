@@ -1,5 +1,5 @@
 FROM node:alpine
-LABEL org.opencontainers.image.source https://github.com/drkcat/api-node
+LABEL org.opencontainers.image.source https://github.com/drkcat/zaragoza-api
 
 RUN mkdir -p /usr/src/app
 

@@ -1,4 +1,4 @@
-import zaragozaTransit from '../service/zaragoza-transit.js';
+import transit from '../service/transit.js';
 
 const controllers = {
   about: (req, res) => {
@@ -8,8 +8,8 @@ const controllers = {
     };
     res.json(aboutInfo);
   },
-  getZaragozaBusStation: (req, res) => {
-    zaragozaTransit.busStation(req, res, (err, dist) => {
+  getBusStation: (req, res) => {
+    transit.busStation(req, res, (err, dist) => {
       if (err) res.send(err);
       res.json(dist);
     });
